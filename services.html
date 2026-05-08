@@ -1,109 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — MindClear CBT</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="logo/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon" />
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{font-family:'Inter',sans-serif;background:#f6f3ef;color:#1c1a17;padding:28px}
-    .wrap{max-width:1000px;margin:0 auto;background:#fff;border-radius:14px;padding:36px 44px;box-shadow:0 12px 30px rgba(0,0,0,0.06)}
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-    .logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700}
-    .back{background:transparent;border:1.5px solid #d0c9c0;padding:10px 16px;border-radius:999px;color:#6a6258;text-decoration:none;font-weight:600}
-    h1{font-family:'Playfair Display',serif;font-size:1.9rem;margin:14px 0;color:#1c1a17}
-    .intro{color:#4a453e;margin-bottom:20px}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-    .card{background:#fbfbfb;border:1px solid #f0eeeb;padding:18px;border-radius:12px}
-    .card h3{margin-bottom:8px;font-size:1.05rem}
-    .card p{color:#4a453e;font-size:0.96rem}
-    .badge{display:inline-block;margin-top:10px;padding:6px 10px;background:#e9e3d9;border-radius:999px;font-weight:600;color:#6a6258;border:1px solid #e0d9cf}
-    footer{margin-top:20px;display:flex;justify-content:flex-end}
-    @media (max-width:720px){body{padding:18px}.wrap{padding:22px}}
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e9e3d9 0%, #f0ece6 100%);
+      background-attachment: fixed;
+      color: #1c1a17;
+      line-height: 1.8;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('logo/logo2.png');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.1; /* Slightly more visible background for services */
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(5px);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #1c1a17;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-weight: 400;
+      color: #8c5e2a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4a453e;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #8c5e2a;
+    }
+
+    .back-btn {
+      background: linear-gradient(135deg, #358a7c 0%, #9ece9d 100%);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.85rem;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(28, 26, 23, 0.2);
+    }
+
+    main {
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 20px;
+      padding: 60px 50px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #1c1a17;
+      text-align: center;
+      background: linear-gradient(135deg, #1c1a17 0%, #8c5e2a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lead {
+      color: #4a453e;
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 30px;
+      border-radius: 16px;
+      border-left: 5px solid #8c5e2a;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #1c1a17;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #5a5248;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f0ece6;
+      border-radius: 999px;
+      font-weight: 600;
+      color: #8c5e2a;
+      font-size: 0.8rem;
+      border: 1px solid rgba(140, 94, 42, 0.1);
+    }
+
+    footer {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      main {
+        padding: 40px 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
+
+  <div class="container">
     <header>
-      <div class="logo">MindClear <span style="font-weight:400">CBT</span></div>
-      <a class="back" href="index.html">← Back to Homepage</a>
+      <a href="index.html" class="logo">MindClear <span>CBT</span></a>
+      <nav class="nav-links">
+        <a href="about.html">About CBT</a>
+        <a href="services.html" style="color: #8c5e2a; font-weight: 600;">Services</a>
+        <a href="index.html" class="back-btn">Home</a>
+      </nav>
     </header>
 
     <main>
       <h1>Our Services</h1>
-      <p class="intro">We offer a range of evidence-based CBT services tailored to your needs — from individual therapy to specialist interventions.</p>
+      <p class="lead">We offer a range of evidence-based CBT services tailored to your unique needs. Whether you prefer individual sessions, group support, or flexible online options, we are here to help.</p>
 
-      <section class="services">
-        <article class="card">
-          <h3>🧠 Individual CBT Therapy</h3>
-          <p>One-to-one sessions with a trained therapist. Tailored to your specific issues and goals, focusing on identifying and changing negative thought patterns.</p>
-          <div class="badge">✅ Most common and personalised form of CBT</div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div>
+            <h3>🧠 Individual CBT Therapy</h3>
+            <p>One-to-one sessions with a trained therapist. Tailored to your specific issues and goals, focusing on identifying and changing negative thought patterns.</p>
+          </div>
+          <span class="badge">Most Personalised</span>
         </article>
 
-        <article class="card">
-          <h3>👥 Group CBT Sessions</h3>
-          <p>Therapy conducted in small groups. Learn alongside others facing similar challenges and benefit from peer support.</p>
-          <div class="badge">✅ Often used for anxiety, depression, or social skills</div>
+        <article class="service-card">
+          <div>
+            <h3>👥 Group CBT Sessions</h3>
+            <p>Therapy conducted in small groups. Learn alongside others facing similar challenges and benefit from shared experiences and peer support.</p>
+          </div>
+          <span class="badge">Peer Support</span>
         </article>
 
-        <article class="card">
-          <h3>💻 Online / Remote CBT</h3>
-          <p>Sessions via video calls, phone, or apps — flexible and accessible from home for convenience and privacy.</p>
-          <div class="badge">✅ Very popular for convenience and privacy</div>
+        <article class="service-card">
+          <div>
+            <h3>💻 Online / Remote CBT</h3>
+            <p>Sessions via video calls, phone, or secure apps. Flexible and accessible from the comfort of your home for maximum convenience.</p>
+          </div>
+          <span class="badge">Highly Flexible</span>
         </article>
 
-        <article class="card">
-          <h3>📞 Initial Consultation / Assessment</h3>
-          <p>First session to understand your concerns. The therapist evaluates your needs and suitability for CBT to create a personalised plan.</p>
-          <div class="badge">✅ Helps create a personalised treatment plan</div>
+        <article class="service-card">
+          <div>
+            <h3>📞 Initial Consultation</h3>
+            <p>A comprehensive assessment to understand your concerns. We evaluate your needs to create a tailored treatment plan that works for you.</p>
+          </div>
+          <span class="badge">Starting Point</span>
         </article>
 
-        <article class="card">
-          <h3>🎯 CBT for Specific Conditions</h3>
-          <p>Specialised therapy for anxiety disorders, depression, OCD, PTSD, phobias, stress & burnout, and more.</p>
-          <div class="badge">✅ Focused and structured treatment plans</div>
+        <article class="service-card">
+          <div>
+            <h3>🎯 Specialist Conditions</h3>
+            <p>Targeted therapy for anxiety disorders, depression, OCD, PTSD, phobias, and burnout using specific evidence-based protocols.</p>
+          </div>
+          <span class="badge">Expert Focus</span>
         </article>
 
-        <article class="card">
-          <h3>🛠️ Behavioural Therapy Interventions</h3>
-          <p>Practical strategies like exposure therapy, habit reversal and activity scheduling to translate thinking changes into action.</p>
-          <div class="badge">✅ Helps translate thinking changes into action</div>
+        <article class="service-card">
+          <div>
+            <h3>🛠️ Behavioural Interventions</h3>
+            <p>Practical strategies like exposure therapy and activity scheduling to help you translate cognitive changes into real-world action.</p>
+          </div>
+          <span class="badge">Action Oriented</span>
         </article>
 
-        <article class="card">
-          <h3>🧾 Guided Self-Help CBT</h3>
-          <p>Workbooks, exercises or digital programs supported by a therapist for a lower-cost, flexible option.</p>
-          <div class="badge">✅ Lower cost and flexible option</div>
+        <article class="service-card">
+          <div>
+            <h3>🧾 Guided Self-Help</h3>
+            <p>Structured workbooks and digital programs supported by a therapist. A cost-effective and flexible way to learn CBT skills.</p>
+          </div>
+          <span class="badge">Cost Effective</span>
         </article>
 
-        <article class="card">
-          <h3>👨‍👩‍👧 Couples or Family CBT</h3>
-          <p>Improve communication and relationships, addressing shared patterns of thinking and behaviour.</p>
-          <div class="badge">✅ Useful for conflict resolution and emotional support</div>
+        <article class="service-card">
+          <div>
+            <h3>👨‍👩‍👧 Couples & Family CBT</h3>
+            <p>Improve communication and resolve conflicts by addressing shared patterns of thinking and behaviour within relationships.</p>
+          </div>
+          <span class="badge">Relationship Health</span>
         </article>
 
-        <article class="card">
-          <h3>🧘 Stress Management & Resilience Training</h3>
-          <p>Techniques to handle pressure, including relaxation, mindfulness and coping skills — often offered as short courses.</p>
-          <div class="badge">✅ Often offered as short courses or workshops</div>
+        <article class="service-card">
+          <div>
+            <h3>🧘 Resilience Training</h3>
+            <p>Workshops and courses focused on stress management, mindfulness, and building emotional strength for long-term well-being.</p>
+          </div>
+          <span class="badge">Proactive Care</span>
         </article>
-
-        <article class="card">
-          <h3>📚 Psychoeducation</h3>
-          <p>Teaching clients about how thoughts and emotions work to empower long-term self-management.</p>
-          <div class="badge">✅ Helps empower long-term self-management</div>
-        </article>
-      </section>
+      </div>
     </main>
 
     <footer>
-      <a class="back" href="index.html">Back to Homepage</a>
+      <a class="back-btn" href="index.html">← Back to Homepage</a>
     </footer>
   </div>
+
 </body>
 </html>
