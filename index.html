@@ -415,6 +415,79 @@
       50% { opacity: 1; }
     }
 
+    /* ── IMAGES GALLERY ───────────────────────────────── */
+    .images-section {
+      background: linear-gradient(135deg, #f5f1eb 0%, #e9e3d9 100%);
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .gallery-header {
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gallery-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1c1a17;
+      margin-bottom: 16px;
+    }
+
+    .gallery-header p {
+      font-size: 1rem;
+      color: #4a453e;
+      line-height: 1.6;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.08);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(28, 26, 23, 0.9), transparent);
+      padding: 20px 16px 16px;
+      color: #e9e3d9;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
     /* ── RESPONSIVE ───────────────────────────────────── */
     @media (max-width: 860px) {
       nav {
@@ -442,6 +515,23 @@
       .hero-right {
         width: 100%;
         max-width: 420px;
+      }
+
+      .images-section {
+        padding: 60px 32px;
+      }
+
+      .gallery-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+      }
+
+      .gallery-img {
+        height: 220px;
       }
     }
   </style>
@@ -520,7 +610,6 @@
             Online via video or in-person
           </li>
         </ul>
-
         <a href="https://www.thoughts4change.com/book" class="btn-card">Reserve Your Free Call →</a>
       </div>
     </div>
@@ -535,6 +624,55 @@
       </svg>
     </button>
   </div>
+
+  <!-- IMAGES GALLERY -->
+  <section class="images-section">
+    <div class="gallery-header">
+      <h2>Understanding Anxiety</h2>
+      <p>Visual guides to help you understand different levels and types of anxiety, and your path to recovery with professional support.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/anxiety.jpg" alt="General Anxiety" class="gallery-img" />
+        <div class="gallery-caption">General Anxiety</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/anxiety2.jpg" alt="Anxiety Management" class="gallery-img" />
+        <div class="gallery-caption">Anxiety Management</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/mildanxiety.png" alt="Mild Anxiety" class="gallery-img" />
+        <div class="gallery-caption">Mild Anxiety</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/deepanxiety.png" alt="Deep Anxiety" class="gallery-img" />
+        <div class="gallery-caption">Deep Anxiety</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/soft_anxiety.png" alt="Soft Anxiety" class="gallery-img" />
+        <div class="gallery-caption">Soft Anxiety</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/recovery_axiety.png" alt="Recovery Path" class="gallery-img" />
+        <div class="gallery-caption">Recovery Path</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/alivefrom_stress.png" alt="Alive From Stress" class="gallery-img" />
+        <div class="gallery-caption">Alive From Stress</div>
+      </div>
+      <div class="gallery-item">
+        <img src="logo/logo.jpg" alt="Alive From Stress" class="gallery-img" />
+        <div class="gallery-caption">Thoughts4Change</div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
