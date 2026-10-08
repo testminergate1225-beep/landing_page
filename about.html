@@ -66,17 +66,24 @@
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: #1c1a17;
-      letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
       text-decoration: none;
     }
 
-    .logo span {
-      font-weight: 400;
-      color: #8c5e2a;
+    .logo img {
+      height: 50px;
+      width: auto;
+      max-width: 210px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      display: block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .logo:hover img {
+      opacity: 0.9;
+      transform: scale(1.02);
     }
 
     .nav-links {
@@ -231,6 +238,10 @@
         padding: 16px 20px;
       }
 
+      .logo img {
+        height: 42px;
+      }
+
       main {
         padding: 30px 20px;
       }
@@ -253,7 +264,9 @@
 
   <div class="container">
     <header>
-      <a href="index.html" class="logo">THOUGHTS 4CHANGE <span>CBT</span></a>
+      <a href="index.html" class="logo" aria-label="Thoughts 4Change">
+        <img src="logo/new_logo.png" alt="Thoughts 4Change CBT - Counselling &amp; Psychotherapy" />
+      </a>
       <nav class="nav-links">
         <a href="about.html" style="color: #8c5e2a; font-weight: 600;">About CBT</a>
         <a href="services.html">Services</a>
@@ -325,3 +338,4 @@
 
 </body>
 </html>
+
