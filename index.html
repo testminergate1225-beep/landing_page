@@ -44,19 +44,31 @@
     }
 
     .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: #1c1a17;
-      letter-spacing: -0.02em;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 6px;
+      text-decoration: none;
     }
 
-    .nav-logo span {
-      font-weight: 400;
-      color: #8c5e2a;
+    .nav-logo a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 52px;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      display: block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-logo:hover img,
+    .nav-logo a:hover img {
+      opacity: 0.9;
+      transform: scale(1.02);
     }
 
     .nav-links {
@@ -495,6 +507,10 @@
         padding: 20px 32px;
       }
 
+      .nav-logo img {
+        height: 44px;
+      }
+
       .hero {
         flex-direction: column;
         align-items: center;
@@ -541,7 +557,11 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <div class="nav-logo">THOUGHTS 4CHANGE <span>CBT</span></div>
+    <div class="nav-logo">
+      <a href="index.html" aria-label="Thoughts 4Change">
+        <img src="logo/new_logo.png" alt="Thoughts 4Change CBT - Counselling &amp; Psychotherapy" />
+      </a>
+    </div>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
