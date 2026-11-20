@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — THOUGHTS 4CHANGE CBT</title>
+  <meta name="description" content="Get in touch with Thoughts4Change CBT in Greenock. Call, email, visit Parkview Studio, or send us a message." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Thoughts4Change",
+      "telephone": "+447949796244",
+      "email": "thoughts4change@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Parkview Studio, 9 Duff Street",
+        "addressLocality": "Greenock",
+        "postalCode": "PA15 1DB",
+        "addressCountry": "GB"
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e9e3d9 0%, #f0ece6 100%);
+      background-attachment: fixed;
+      color: #1c1a17;
+      line-height: 1.75;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('logo/logo2.png');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.08;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(5px);
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+      max-width: 210px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      display: block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .logo:hover img {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4a453e;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #8c5e2a;
+    }
+
+    .back-btn {
+      background: linear-gradient(135deg, #358a7c 0%, #9ece9d 100%);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.85rem;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 117, 102, 0.2);
+    }
+
+    main {
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 20px;
+      padding: 60px 50px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8c5e2a;
+      background-color: #f0ece6;
+      border-radius: 999px;
+      padding: 6px 16px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #1c1a17;
+      background: linear-gradient(135deg, #1c1a17 0%, #8c5e2a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lead {
+      color: #4a453e;
+      margin-bottom: 42px;
+      font-size: 1.05rem;
+      max-width: 620px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #1c1a17;
+      margin-bottom: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(188, 176, 160, 0.45);
+    }
+
+    .contact-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .contact-item .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #f0ece6;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(140, 94, 42, 0.14);
+    }
+
+    .contact-item strong {
+      display: inline-block;
+      font-size: 0.92rem;
+      color: #1c1a17;
+      margin-bottom: 2px;
+    }
+
+    .contact-item a {
+      color: #4a453e;
+      text-decoration: none;
+      transition: color 0.25s ease;
+      word-break: break-word;
+    }
+
+    .contact-item a:hover {
+      color: #8c5e2a;
+      text-decoration: underline;
+    }
+
+    .contact-item .address {
+      color: #4a453e;
+    }
+
+    .map {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 20px;
+      height: 240px;
+      border: 1px solid rgba(188, 176, 160, 0.45);
+      width: 100%;
+      display: block;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 36px 32px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+      border: 1px solid rgba(188, 176, 160, 0.35);
+    }
+
+    form .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .field label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #4a453e;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 13px 15px;
+      border-radius: 12px;
+      border: 1.5px solid #ddd6cc;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #1c1a17;
+      background: #f8f6f3;
+      outline: none;
+      transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: #8c5e2a;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(140, 94, 42, 0.12);
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e9e3d9;
+      background-color: #1c1a17;
+      border: 2px solid #1c1a17;
+      border-radius: 999px;
+      padding: 14px 30px;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-submit:hover {
+      background-color: #8c5e2a;
+      border-color: #8c5e2a;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(140, 94, 42, 0.25);
+    }
+
+    .btn-submit .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-submit:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .form-msg {
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: #358a7c;
+      display: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 860px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+      }
+
+      .logo img {
+        height: 42px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      main {
+        padding: 32px 22px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .contact-card {
+        padding: 26px 20px;
+      }
+
+      form .row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <a href="index.html" class="logo" aria-label="Thoughts 4Change">
+        <img src="logo/new_logo.png" alt="Thoughts 4Change CBT - Counselling &amp; Psychotherapy" />
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About CBT</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" style="color: #8c5e2a; font-weight: 600;">Contact</a>
+        <a href="index.html" class="back-btn">Home</a>
+      </nav>
+    </header>
+
+    <main>
+      <span class="eyebrow">Get in touch</span>
+      <h1>Contact Us</h1>
+      <p class="lead">Have a question about CBT therapy, sessions, or how we can support you? Reach out directly or send us a message below.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Have a question?</h2>
+          <div class="contact-item">
+            <div class="icon" aria-hidden="true">📞</div>
+            <div>
+              <strong>Phone</strong><br />
+              <a href="tel:+447949796244">+44 (0) 7949 796244</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon" aria-hidden="true">✉️</div>
+            <div>
+              <strong>Email</strong><br />
+              <a href="mailto:thoughts4change@outlook.com">thoughts4change@outlook.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon" aria-hidden="true">📍</div>
+            <div>
+              <strong>Visit</strong><br />
+              <span class="address">Parkview Studio, 9 Duff Street, Greenock PA15 1DB</span>
+            </div>
+          </div>
+          <iframe class="map" title="Map to Parkview Studio, 9 Duff Street, Greenock PA15 1DB" loading="lazy" src="https://www.google.com/maps?q=9+Duff+Street,+Greenock+PA15+1DB&output=embed"></iframe>
+        </div>
+
+        <form class="contact-card" data-contact id="contact-form">
+          <div class="row">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" required />
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" type="email" name="email" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" />
+            </div>
+            <div class="field">
+              <label for="f-type">Interested in</label>
+              <select id="f-type" name="interest">
+                <option>Single session</option>
+                <option>6-session package</option>
+                <option>8-session package</option>
+                <option>Organisational training</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="contact-submit">Send message <span class="arrow">→</span></button>
+          <p class="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <a class="back-btn" href="index.html">← Back to Homepage</a>
+    </footer>
+  </div>
+
+  <script>
+    const CONFIG = {
+      // Formspree form ID (https://formspree.io) – leave empty to fall back to mailto:
+      formspreeId: "",
+      email: "thoughts4change@outlook.com"
+    };
+
+    document.querySelectorAll('form[data-contact]').forEach(form => {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const msg = form.querySelector('.form-msg');
+        const data = new FormData(form);
+        if (CONFIG.formspreeId) {
+          try {
+            const r = await fetch('https://formspree.io/f/' + CONFIG.formspreeId, {
+              method: 'POST',
+              body: data,
+              headers: { Accept: 'application/json' }
+            });
+            msg.textContent = r.ok ? "Thank you — we'll be in touch soon." : 'Something went wrong. Please call or email us.';
+          } catch {
+            msg.textContent = 'Network error. Please call or email us.';
+          }
+        } else {
+          const body = [...data.entries()].map(([k, v]) => `${k}: ${v}`).join('\n');
+          location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Website enquiry')}&body=${encodeURIComponent(body)}`;
+          msg.textContent = 'Opening your email app…';
+        }
+        msg.style.display = 'block';
+        form.reset();
+      });
+    });
+  </script>
+
+</body>
+</html>
